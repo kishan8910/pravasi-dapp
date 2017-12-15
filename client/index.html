@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Migrant Saver App</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="container">
+  <h1>Register User</h1>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+       <!--  <tr>
+          <th>Candidate</th>
+          <th>Votes</th>
+        </tr> -->
+      </thead>
+      <tbody>
+        <tr>
+          <td>User Name</td>
+          <td > <input type="text" name="name" id="name"> </td>
+        </tr>
+        <tr>
+          <td>Aadhar No</td>
+          <td ><input type="text" name="aadhar_no" id="aadhar_no"></td>
+        </tr>
+        <tr>
+          <td>Is Migrant</td>
+          <td ><input type="checkbox" name="isMigrant" id="isMigrant"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <a href="#" onclick="saveUser();" class="btn btn-primary">Submit</a>
+
+</body>
+
+<body class="container">
+    
+    <h1>Search User</h1>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+       <!--  <tr>
+          <th>Candidate</th>
+          <th>Votes</th>
+        </tr> -->
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aadhar No</td>
+          <td ><input type="text" name="aadhar_no_search" id="aadhar_no_search"></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <a href="#" onclick="searchUser(0);" class="btn btn-primary">Search User</a>
+
+  <!-- <a href="#" onclick="searchUser(1);" class="btn btn-primary">Search Migrants</a> -->
+
+</body>
+
+
+<div class="container" id="showUser" style="display: none;">
+  
+<h1>User Details</h1>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+       
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-md-4">Aadhar No</td>
+          <td class="col-md-4"><div id="output_aadhar"></div></td>
+          <td class="col-md-4">
+            <select class="form-control">
+              <option value="">Rate the user</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-md-4">Name</td>
+          <td class="col-md-4"><div id="output_name"></div></td>
+          <td rowspan="2" class="col-md-4">
+            <textarea cols="35" rows="5"></textarea>
+             <a href="#" onclick="submitFeedback();" class="btn btn-primary">Submit Feedback</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-md-4">User Type</td>
+          <td class="col-md-4"><div id="output_migrant"></div></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="./index.js"></script>
+</html>
